@@ -2,6 +2,7 @@ const Web3 = require('web3')
 const fs = require('fs')
 
 async function main () {
+  // 先用web3打通一次合约调用流程
   const ercAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
   const from = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
   const Market = JSON.parse(fs.readFileSync("./test/artifacts/contracts/ERC20.sol/ERC20.json", 'utf-8'))

@@ -1,13 +1,28 @@
-# Sample Hardhat Project
+# 基于Hardhat脚手架demo
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+## 开发配置
 
-Try running some of the following tasks:
+windows+node+vscoe
 
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
+## 借鉴资料
+
+- <https://remix.ethereum.org/> 在线学习工具，这里有例子、有可视化调试，方便学习
+- <https://solidity-cn.readthedocs.io/zh/develop/>
+- <https://solidity-by-example.org/>
+- <https://learnblockchain.cn/2018/04/15/web3-html>
+- <https://hardhat.org/hardhat-runner/docs/getting-started#running-tasks>
+- <https://learnblockchain.cn/docs/ethers.js/>
+- <https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20> // ERC20智能合约仓库
+- <https://wugaosheng.gitbooks.io/blockchain/content/web3-contract.html>
+- <https://ethereum.org/zh/developers/docs/standards/tokens/erc-20/>
+
+## 执行测试用例
+
+`npx run test`
+
+## 部署合约
+
+```bash
 npx hardhat node
-npx hardhat run scripts/deploy.js
+npx hardhat run scripts/deploy.js --network localhost
 ```

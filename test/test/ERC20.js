@@ -97,10 +97,22 @@ describe("ERC20", function () {
         await transferNumber(erc20, ownerAddress, otherAccount.address)
         const contractTransfCountAfter = await erc20.transferCount()
         const dx = contractTransfCountAfter.sub(contractTransfCountBefore)
-        expect(bn.toString()).to.equal(dx.toString())
+        expect(bn.toString()).to.equal(dx.toString()) // 测试是否每次都增加1
       }
       const contractTransfCount = await erc20.transferCount()
       expect(countBn.toString()).to.equal(contractTransfCount.toString())
+    })
+    it("转账失败（例如没有余额），不应增加转账次数", async function () {
+      const { erc20, otherAccounts, ownerAddress } = await loadFixture(deployERC20Fixture)
+      const contractTransfCountBefore = await erc20.transferCount()
+      await transferNumber(
+        erc20,
+        ownerAddress,
+        otherAccounts[0].address,
+        10000
+      )
+      const contractTransfCountAfter = await erc20.transferCount()
+      expect(contractTransfCountBefore.toString()).to.equal(contractTransfCountAfter.toString())
     })
   })
 })
