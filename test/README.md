@@ -18,11 +18,12 @@ windows+node+vscoe
 
 ## 执行测试用例
 
-`npx run test`
+`yarn test`
 
 ## 部署合约
 
 ```bash
-npx hardhat node
-npx hardhat run scripts/deploy.js --network localhost
+yarn node
+这里注意，需要yarn node 执行完成才可以执行下面的命令
+yarn dev:deploy
 ```
