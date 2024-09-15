@@ -1,0 +1,23 @@
+{
+  "name": "contract-demo",
+  "version": "1.0.0",
+  "description": "首次接触智能合约-学习demo",
+  "main": "ganache.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chendss/contract-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chendss/contract-demo/issues"
+  },
+  "homepage": "https://github.com/chendss/contract-demo#readme",
+  "dependencies": {
+    "ganache": "^7.4.1",
+    "web3": "^1.7.5"
+  }
+}
